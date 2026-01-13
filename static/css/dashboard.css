@@ -1,0 +1,156 @@
+/* static/css/dashboard.css */
+body { 
+    font-family: 'Segoe UI', Arial, sans-serif; 
+    background-color: #f0f2f5; 
+    padding: 20px; 
+    margin: 0;
+}
+
+.container { 
+    max-width: 900px; 
+    margin: 40px auto; 
+    background: white; 
+    padding: 30px; 
+    border-radius: 12px; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
+}
+
+h2 { 
+    text-align: center; 
+    color: #1a73e8; 
+    margin-bottom: 30px; 
+    font-size: 28px;
+}
+
+.add-btn { 
+    display: inline-block; 
+    padding: 12px 24px; 
+    background: #28a745; 
+    color: white; 
+    text-decoration: none; 
+    border-radius: 6px; 
+    font-weight: bold; 
+    float: right; 
+    transition: background 0.3s;
+}
+
+.add-btn:hover { background: #218838; }
+
+table { 
+    width: 100%; 
+    border-collapse: collapse; 
+    margin-top: 20px;
+    background: #fff;
+}
+
+th, td { 
+    border-bottom: 1px solid #eee; 
+    padding: 15px; 
+    text-align: left; 
+}
+
+th { 
+    background-color: #f8f9fa; 
+    color: #555; 
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+}
+
+tr:hover { background-color: #fdfdfd; }
+
+.user-img { 
+    width: 65px; 
+    height: 65px; 
+    object-fit: cover; 
+    border-radius: 10px; 
+    border: 2px solid #e0e0e0; 
+}
+
+.no-data {
+    text-align: center;
+    padding: 40px;
+    color: #888;
+}
+
+.pagination {
+    margin-top: 20px;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.page-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+.page-btn:hover {
+    background-color: #0056b3;
+}
+
+.page-info {
+    font-size: 1.1rem;
+    color: #333;
+    font-weight: 600;
+}
+.action-bar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.delete-bulk-btn {
+    background-color: #ff4d4d;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.delete-bulk-btn:hover {
+    background-color: #cc0000;
+}
+
+
+
+.action-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Page delete button (Yellow/Orange) */
+.delete-page-btn {
+    background-color: #f39c12;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+/* Individual delete button inside table */
+.btn-sm-delete {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+.btn-sm-delete:hover {
+    background-color: #c0392b;
+}   

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Available Profiles</title>
+    <style>
+        body { background: #f4f7f6; font-family: sans-serif; padding: 20px; }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .profile-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            text-align: center;
+            padding-bottom: 15px;
+        }
+        .profile-card:hover { transform: translateY(-10px); }
+        .profile-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            background: #eee;
+        }
+        .info { padding: 15px; }
+        .info h3 { margin: 10px 0; color: #333; }
+        .badge {
+            background: #3498db;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+        }
+        .details { color: #666; font-size: 14px; margin-top: 10px; }
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 20px;
+            text-decoration: none;
+            color: #3498db;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <a href="/" class="back-btn">← Back to Search</a>
+    <h1 style="text-align: center; color: #2c3e50;">Matching Profiles</h1>
+
+    <div class="grid-container">
+        {% for profile in profiles %}
+        <div class="profile-card">
+            {% if profile.image_filename %}
+                {% if profile.image_filename.startswith('http') or profile.image_filename.startswith('data:image') %}
+                    <img src="{{ profile.image_filename }}" class="profile-img">
+                {% else %}
+                    <img src="{{ url_for('static', filename='uploads/' + profile.image_filename) }}" class="profile-img">
+                {% endif %}
+            {% else %}
+                <div class="profile-img" style="display:flex; align-items:center; justify-content:center;">No Image</div>
+            {% endif %}
+
+            <div class="info">
+                <span class="badge">{{ profile.gender }}</span>
+                <h3>Age: {{ profile.age }}</h3>
+                <p class="details">Body Type: <b>{{ profile.body_type }}</b></p>
+                <button style="margin-top:15px; padding: 8px 20px; border:none; background:#2ecc71; color:white; border-radius:5px; cursor:pointer;">View Full Bio</button>
+            </div>
+        </div>
+        {% else %}
+        <p style="text-align: center; grid-column: 1/-1;">No profiles found matching your criteria.</p>
+        {% endfor %}
+    </div>
+
+</body>
+</html>
