@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* static/css/form.css */
 body { 
     font-family: 'Segoe UI', Arial, sans-serif; 
@@ -92,4 +93,100 @@ button:hover { background: #0056b3; }
     font-size: 14px; 
 }
 
+=======
+/* static/css/form.css */
+body { 
+    font-family: 'Segoe UI', Arial, sans-serif; 
+    background-color: #e9ecef; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    min-height: 100vh; 
+    margin: 0; 
+}
+
+.card { 
+    background: white; 
+    padding: 40px; 
+    border-radius: 15px; 
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1); 
+    width: 100%;
+    max-width: 400px; 
+}
+
+h2 { 
+    text-align: center; 
+    margin-bottom: 25px; 
+    color: #333; 
+}
+
+label { 
+    font-weight: 600; 
+    display: block; 
+    margin-top: 15px; 
+    color: #444;
+    font-size: 14px;
+}
+
+input, select { 
+    width: 100%; 
+    padding: 12px; 
+    margin: 8px 0 15px 0; 
+    border: 1px solid #ced4da; 
+    border-radius: 8px; 
+    box-sizing: border-box; 
+    font-size: 15px;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0,123,255,0.1);
+}
+
+.divider { 
+    text-align: center; 
+    margin: 20px 0; 
+    font-size: 12px; 
+    color: #aaa; 
+    font-weight: bold; 
+    position: relative; 
+}
+
+.divider::before, .divider::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 42%;
+    border-top: 1px solid #eee;
+}
+.divider::before { left: 0; }
+.divider::after { right: 0; }
+
+button { 
+    width: 100%; 
+    padding: 14px; 
+    background: #007bff; 
+    color: white; 
+    border: none; 
+    border-radius: 8px; 
+    cursor: pointer; 
+    font-size: 16px; 
+    font-weight: bold;
+    margin-top: 10px;
+    transition: background 0.3s;
+}
+
+button:hover { background: #0056b3; }
+
+.back-link { 
+    display: block; 
+    text-align: center; 
+    margin-top: 25px; 
+    text-decoration: none; 
+    color: #6c757d; 
+    font-size: 14px; 
+}
+
+>>>>>>> 76baebd5b94eb6e68bf4293202a3392cbed1a86f
 .back-link:hover { color: #333; }

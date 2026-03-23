@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
 <head><title>Edit Profile</title></head>
@@ -29,4 +30,37 @@
         </form>
     </div>
 </body>
+=======
+<!DOCTYPE html>
+<html>
+<head><title>Edit Profile</title></head>
+<body>
+    <div style="max-width: 500px; margin: 50px auto; padding: 20px; border: 1px solid #ccc; border-radius: 10px;">
+        <h2>✏️ Edit Profile</h2>
+        <form action="{{ url_for('update_profile', user_id=user._id) }}" method="POST">
+            <input type="hidden" name="page" value="{{ page }}">
+            <input type="hidden" name="search" value="{{ search_query }}">
+            <input type="hidden" name="gender_filter" value="{{ gender_filter }}">
+
+            <p>Gender:<br>
+            <select name="gender" style="width: 100%; padding: 8px;">
+                <option value="Men" {% if user.gender == 'Men' %}selected{% endif %}>Men</option>
+                <option value="Women" {% if user.gender == 'Women' %}selected{% endif %}>Women</option>
+            </select></p>
+
+            <p>Age:<br>
+            <input type="text" name="age" value="{{ user.age }}" style="width: 100%; padding: 8px; box-sizing: border-box;"></p>
+
+            <p>Body Type:<br>
+            <input type="text" name="body_type" value="{{ user.body_type }}" style="width: 100%; padding: 8px; box-sizing: border-box;"></p>
+
+            <p>Image URL:<br>
+            <input type="text" name="image_url" value="{{ user.image_filename }}" style="width: 100%; padding: 8px; box-sizing: border-box;"></p>
+
+            <button type="submit" style="padding: 10px 20px; background: #27ae60; color: white; border: none; border-radius: 5px; cursor: pointer;">Save Changes</button>
+            <a href="{{ url_for('dashboard', page=page, search=search_query, gender_filter=gender_filter) }}" style="margin-left: 10px; color: #666;">Cancel</a>
+        </form>
+    </div>
+</body>
+>>>>>>> 76baebd5b94eb6e68bf4293202a3392cbed1a86f
 </html>

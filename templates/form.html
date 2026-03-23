@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -50,4 +51,58 @@
         <a href="/dashboard" class="back-link">Cancel & Go Back</a>
     </div>
 </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Profile</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/form.css') }}">
+</head>
+<body>
+    <div class="card">
+        <h2>Add New Profile</h2>
+        <form action="/save_profile" method="POST" enctype="multipart/form-data">
+            <label>Gender</label>
+            <select name="gender" required>
+                <option value="">Select</option>
+                <option value="Men">Men</option>
+                <option value="Women">Women</option>
+            </select>
+
+            <label>Age Range</label>
+            <select name="age" required>
+                <option value="">Select</option>
+                <option value="18-24">18-24</option>
+                <option value="25-34">25-34</option>
+                <option value="35-44">35-44</option>
+                <option value="45+">45+</option>
+            </select>
+
+            <label>Body Type</label>
+            <select name="body_type" required>
+                <option value="">Select</option>
+                <option value="Athletic">Athletic</option>
+                <option value="Curvy">Curvy</option>
+                <option value="Tall">Tall</option>
+                <option value="Rectangular">Rectangular</option>
+                <option value="Petite">Petite</option>
+            </select>
+
+            <div class="image-section">
+                <label>Option 1: Upload Photo</label>
+                <input type="file" name="image" accept="image/*">
+
+                <div class="divider">OR</div>
+
+                <label>Option 2: Image URL (Link)</label>
+                <input type="text" name="image_url" placeholder="https://example.com/photo.jpg">
+            </div>
+
+            <button type="submit">Save Profile</button>
+        </form>
+        <a href="/dashboard" class="back-link">Cancel & Go Back</a>
+    </div>
+</body>
+>>>>>>> 76baebd5b94eb6e68bf4293202a3392cbed1a86f
 </html>
